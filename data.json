@@ -1,0 +1,44 @@
+{
+  "doctor": {
+    "name": "Dr. John Doe, Consultant",
+    "specialization": "Dermatologist",
+    "qualification": "MBBS in Dermat",
+    "college": "Gandhi Medical College, Bhopal",
+    "bmdc": "A72573"
+  },
+  "patient": {
+    "name": "Jake Ryan",
+    "age": "23",
+    "weight": "62",
+    "gender": "Male"
+  },
+  "appointment": { "id": "4843", "date": "09/23/2021", "time": "4:00 PM" },
+  "medicalHistory": ["not applicable", "not applicable", "not applicable"],
+  "complaints": ["not applicable", "not applicable", "not applicable"],
+  "vitals": ["BP", "Pulse", "Temp", "SPO2"],
+  "diagonsis": ["Anxiety", "Fever"],
+  "investigations": [
+    "not applicable",
+    "not applicable",
+    "not applicable",
+    "not applicable",
+    "not applicable",
+    "not applicable"
+  ],
+  "followUp": "23rd August 2021",
+  "medicines": [
+    {
+      "name": "Tab. Paracetamol",
+      "dosage": "10mg",
+      "instruction": "After Dinner",
+      "duration": "10 Days"
+    },
+    {
+      "name": "Tab. Paracetamol",
+      "dosage": "10mg",
+      "instruction": "After Dinner",
+      "duration": "10 Days"
+    }
+  ],
+  "signatureImage": "https://www.seekpng.com/png/detail/231-2318449_doctor-signature-png-signature-en-png.png"
+}
