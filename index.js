@@ -1,7 +1,7 @@
 const pdf = require("pdf-creator-node");
 const fs = require("fs");
-const html = fs.readFileSync("./template/template.html", "utf-8");
-const data = require("./data.json");
+const html = fs.readFileSync("./template/invoice/template.html", "utf-8");
+const data = require("./invoice_data.json");
 
 const document = {
   html: html,

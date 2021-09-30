@@ -170,88 +170,98 @@
         </div>
       </div>
     </div>
-    <div
-      style="
-        display: inline-block;
-        width: 150px;
-        border-right: 1.5px solid #808080;
-        height: 100%;
-        padding-bottom: 0px;
-      "
-    >
-      <div class="left-container">
-        <h6>Past Medical History/Comorbidities</h6>
-        <div style="margin-top: 5px">
-          {{#each medicalHistory}}
-          <p class="small-text">- {{this}}</p>
-          {{/each}}
+    <div style="border-bottom: 1.5px solid #808080">
+      <div
+        style="
+          display: inline-block;
+          width: 150px;
+          border-right: 1.5px solid #808080;
+          height: 100%;
+          padding-bottom: 20px;
+        "
+      >
+        <div class="left-container">
+          <h6>Past Medical History/Comorbidities</h6>
+          <div style="margin-top: 5px">
+            {{#each medicalHistory}}
+            <p class="small-text">- {{this}}</p>
+            {{/each}}
+          </div>
+        </div>
+        <div class="left-container">
+          <h6>Chief Complaints</h6>
+          <div style="margin-top: 5px">
+            {{#each complaints}}
+            <p class="small-text">- {{this}}</p>
+            {{/each}}
+          </div>
+        </div>
+        <div class="left-container">
+          <h6>Vitals</h6>
+          <div style="margin-top: 5px">
+            {{#each vitals}}
+            <p class="small-text">- {{this}}</p>
+            {{/each}}
+          </div>
+        </div>
+        <div class="left-container">
+          <h6>Diagonsis</h6>
+          <div style="margin-top: 5px">
+            {{#each diagonsis}}
+            <p class="small-text">- {{this}}</p>
+            {{/each}}
+          </div>
+        </div>
+        <div class="left-container">
+          <h6>Investigations</h6>
+          <div style="margin-top: 5px">
+            {{#each investigations}}
+            <p class="small-text">- {{this}}</p>
+            {{/each}}
+          </div>
+        </div>
+        <div class="left-container">
+          <h6>Next Follow Up Date</h6>
+          <div style="margin-top: 5px">
+            <p class="small-text">{{followUp}}</p>
+          </div>
         </div>
       </div>
-      <div class="left-container">
-        <h6>Chief Complaints</h6>
-        <div style="margin-top: 5px">
-          {{#each complaints}}
-          <p class="small-text">- {{this}}</p>
+      <div style="display: inline-block; vertical-align: top">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/100/100504.png"
+          alt="rx"
+          class="rx-image"
+        />
+        <table id="customers">
+          <tr>
+            <th>Medicine</th>
+            <th>Dosage</th>
+            <th>Instruction</th>
+            <th>Duration</th>
+          </tr>
+          {{#each medicines}}
+          <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.dosage}}</td>
+            <td>{{this.instruction}}</td>
+            <td>{{this.duration}}</td>
+          </tr>
           {{/each}}
-        </div>
-      </div>
-      <div class="left-container">
-        <h6>Vitals</h6>
-        <div style="margin-top: 5px">
-          {{#each vitals}}
-          <p class="small-text">- {{this}}</p>
-          {{/each}}
-        </div>
-      </div>
-      <div class="left-container">
-        <h6>Diagonsis</h6>
-        <div style="margin-top: 5px">
-          {{#each diagonsis}}
-          <p class="small-text">- {{this}}</p>
-          {{/each}}
-        </div>
-      </div>
-      <div class="left-container">
-        <h6>Investigations</h6>
-        <div style="margin-top: 5px">
-          {{#each investigations}}
-          <p class="small-text">- {{this}}</p>
-          {{/each}}
-        </div>
-      </div>
-      <div class="left-container">
-        <h6>Next Follow Up Date</h6>
-        <div style="margin-top: 5px">
-          <p class="small-text">{{followUp}}</p>
+        </table>
+        <div style="float: right; margin-top: 270px">
+          <img src="{{signatureImage}}" alt="rx" class="signature" />
+          <p style="font-size: 11px; text-align: center">(Signature)</p>
         </div>
       </div>
     </div>
-    <div style="display: inline-block; vertical-align: top">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/100/100504.png"
-        alt="rx"
-        class="rx-image"
-      />
-      <table id="customers">
-        <tr>
-          <th>Medicine</th>
-          <th>Dosage</th>
-          <th>Instruction</th>
-          <th>Duration</th>
-        </tr>
-        {{#each medicines}}
-        <tr>
-          <td>{{this.name}}</td>
-          <td>{{this.dosage}}</td>
-          <td>{{this.instruction}}</td>
-          <td>{{this.duration}}</td>
-        </tr>
-        {{/each}}
-      </table>
-      <div style="float: right; margin-top: 270px">
-        <img src="{{signatureImage}}" alt="rx" class="signature" />
-        <p style="font-size: 11px; text-align: center">(Signature)</p>
-      </div>
+    <div style="margin-top: 10px">
+      <h6>Note</h6>
+      <p style="font-size: 9px; color: #303030; margin-top: 2px">
+        This is a digital prescription provided by a verified doctor, use it as
+        per your discretion. Remassis will not be responsible for any misuse or
+        abuse at the prescription.
+      </p>
     </div>
   </body>
 </html>
